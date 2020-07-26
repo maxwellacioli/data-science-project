@@ -6,23 +6,23 @@ Created on Mon Jul 26 20:11:30 2020
 
 
 import sys
-sys.path.append("../tools/")
-from projeto import preprocess
-from sklearn.model_selection import cross_val_score
-import numpy as np
+sys.path.append("../../tools/")
+from preprocess import preprocess
+# from sklearn.model_selection import cross_val_score
+# import numpy as np
 
-from sklearn.ensemble import RandomForestClassifier
+# from sklearn.ensemble import RandomForestClassifier
 
-X_train, X_test, y_train, y_test, data, target = preprocess()
+# data = preprocess()
 
-clf = RandomForestClassifier(criterion='entropy', max_depth= 5, random_state=42)
+# clf = RandomForestClassifier(criterion='entropy', max_depth= 5, random_state=42)
 
-acc_scor = np.mean(cross_val_score(clf, data, target, cv=10, scoring='accuracy'))
-prec_scor = np.mean(cross_val_score(clf, data, target, cv=10, scoring='precision'))
-f1_scor = np.mean(cross_val_score(clf, data, target, cv=10, scoring='f1'))
-rec_scor = np.mean(cross_val_score(clf, data, target, cv=10, scoring='recall'))
+# acc_scor = np.mean(cross_val_score(clf, data, target, cv=10, scoring='accuracy'))
+# prec_scor = np.mean(cross_val_score(clf, data, target, cv=10, scoring='precision'))
+# f1_scor = np.mean(cross_val_score(clf, data, target, cv=10, scoring='f1'))
+# rec_scor = np.mean(cross_val_score(clf, data, target, cv=10, scoring='recall'))
 
-print("Accuracy: {}\n".format(acc_scor) + 
-      "Precision: {}\n".format(prec_scor) + 
-      "Recall: {}\n".format(rec_scor) + 
-      "F1: {}\n".format(f1_scor))
+# print("Accuracy: {}\n".format(acc_scor) + 
+#       "Precision: {}\n".format(prec_scor) + 
+#       "Recall: {}\n".format(rec_scor) + 
+#       "F1: {}\n".format(f1_scor))
