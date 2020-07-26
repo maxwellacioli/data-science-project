@@ -1,0 +1,20 @@
+Gestão de Pessoas (Executivo Federal) - Abono Permanência
+Contempla os dados cadastrais de servidores públicos federais que recebem abono permanência, como nome, CPF, cargo, órgão.
+
+Conceito
+
+O abono de permanência é um benefício pecuniário concedido ao servidor que opte por permanecer em atividade após ter cumprido todos os requisitos para aposentadoria voluntária, no valor equivalente à sua contribuição previdenciária, até completar as exigências para a aposentadoria compulsória.
+
+Política Pública
+
+Política pública de aperfeiçoamento contínuo dos processos de gestão de pessoas no âmbito da administração pública federal, no aspecto relativo ao planejamento e dimensionamento da força de trabalho, com o objetivo da busca da eficiência e economicidade no serviço público federal.
+
+Legislação
+
+EC nº 41/2003; Lei nº 10.887 de 18 de junho de 2004.
+
+Veja também
+
+http://painel.pep.planejamento.gov.br/QvAJAXZfc/opendoc.htm?document=painelpep.qvw&lang=en-US&host=Local&anonymous=true
+
+Seção "Despesas de Pessoal".
