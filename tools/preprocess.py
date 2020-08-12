@@ -6,11 +6,30 @@ Created on Mon Jul 26 18:41:30 2020
 
 
 import pandas as pd
+import numpy as np
 # from sklearn.model_selection import train_test_split
 # import datetime as dt
 
 # def preprocess():
-# aposentados_file='../datasets/dataset-aposentados/APOSENTADOS_052020_FULL_PARTE_1.csv'
-aposentados_df = pd.read_csv('../datasets/dataset-aposentados/APOSENTADOS_052020_FULL_PARTE_1.csv', error_bad_lines=False, encoding="utf-8")
+aposentados_df1 = pd.read_csv('../datasets/dataset-aposentados/APOSENTADOS_052020_FULL_PARTE_1.csv', sep=';', encoding='ISO-8859-1', dtype='unicode')
+aposentados_df2 = pd.read_csv('../datasets/dataset-aposentados/APOSENTADOS_052020_FULL_PARTE_2.csv', sep=';', encoding='ISO-8859-1', dtype='unicode')
+
+dataframes = [aposentados_df1, aposentados_df2]
+
+aposentados_df = pd.concat(dataframes)
+
+row_index_column_error2_not_nan =  np.where(aposentados_df['Column Error2'].notnull())[0]
+
+aposentados_df = aposentados_df.drop(row_index_column_error2_not_nan)
+
+aposentados_df = aposentados_df.drop(columns=['Column Error2'])
+
+row_index_column_error1_not_nan =  np.where(aposentados_df['Column Error1'].notnull())[0]
+
+for i in row_index_column_error1_not_nan:
+    if i in aposentados_df.index:
+        aposentados_df = aposentados_df.drop(i)
     
+aposentados_df = aposentados_df.drop(columns=['Column Error1'])
+
 # return aposentados_df
