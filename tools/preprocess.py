@@ -47,31 +47,33 @@ abono_docentes_df = abono_df[abono_df['Descrição do cargo emprego'].str.contai
 
 '''ABONDO'''
 abono_name = abono_docentes_df['Nome'].tolist()
-abono_cpf = abono_docentes_df['CPF'].tolist()
 abono_cargo = abono_docentes_df['Descrição do cargo emprego'].tolist()
 abono_orgao = abono_docentes_df['Denominação unidade organizacional'].tolist()
-# abono_uf = abono_docentes_df['UF da Redidência'].tolist()
-abono_valor = abono_docentes_df['Val'].tolist()
+abono_valor_aux = abono_docentes_df.iloc[:,-1].str.replace(',', '.').astype(float).reset_index(drop=True)
+
+# Calculate abono salario
+'''TODO CALCULAR SALARIO: S = (100*A)/11'''
+abono_valor = list()
+for index, value in abono_valor_aux.items():
+    abono_valor.append((100*value)/11)
 
 abono_aux_df = pd.DataFrame()
 abono_aux_df['Nome'] = abono_name
-abono_aux_df['CPF'] = abono_cpf
 abono_aux_df['Cargo'] = abono_cargo
 abono_aux_df['Orgao'] = abono_orgao
-abono_aux_df['Valor'] = abono_valor
+abono_aux_df['Valor'] = abono_valor 
 abono_aux_df['Afastamento'] = 1
 
 '''APOSENTADOS'''
 aposentados_nome = aposentados_docentes_df['Nome'].tolist()
-# aposentados_cpf = aposentados_docentes_df['CPF'].tolist()
 aposentados_cargo = aposentados_docentes_df['Cargo emprego'].tolist()
 aposentados_orgao = aposentados_docentes_df['Orgao'].tolist()
-# aposentados_uf = aposentados_docentes_df[''].tolist()
-aposentados_valor = aposentados_docentes_df['Valor aposentadoria'].tolist()
+aposentados_valor = aposentados_docentes_df.iloc[:,-1].str.replace('.', '').reset_index(drop=True)
+aposentados_valor = aposentados_valor.str.replace(',', '.').astype(float)
+
 
 aposentado_aux_df = pd.DataFrame()
 aposentado_aux_df['Nome'] = aposentados_nome
-# aposentado_aux_df['CPF'] = aposentados_cpf
 aposentado_aux_df['Cargo'] = aposentados_cargo
 aposentado_aux_df['Orgao'] = aposentados_orgao
 aposentado_aux_df['Valor'] = aposentados_valor
