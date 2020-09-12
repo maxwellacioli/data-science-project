@@ -175,4 +175,8 @@ dataframe = dataframe.sample(frac=1).reset_index(drop=True)
 
 dataframe.dropna(inplace=True)
 
+dataframe["Situacao"] = dataframe["Situacao"].astype(int)
+
+print(dataframe.dtypes)
+
 # # # //TODO datasets return splited datasets
