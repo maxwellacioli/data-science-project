@@ -1,0 +1,231 @@
+[2020-09-07 13:07:25][INFO] PIPELINE   	
+[2020-09-07 13:07:25][INFO] INIT       	Initializing Pipeline class.
+[2020-09-07 13:07:25][INFO] INIT       	Obtaining related directory and file paths.
+[2020-09-07 13:07:25][INFO] INIT       	No root directory specified, set to 'C:\\Users\\Maxwell\\Projetos\\data-science-project\\tools'.
+[2020-09-07 13:07:25][INFO] INIT       	No working directory specified, trying to load last one created.
+[2020-09-07 13:07:25][INFO] INIT       	No working directories found, created 'prism_0'.
+[2020-09-07 13:07:25][INFO] INIT       	Reading in PRISM parameters.
+[2020-09-07 13:07:25][INFO] INIT       	Finished reading in PRISM parameters.
+[2020-09-07 13:07:25][INFO] EMUL_LOAD  	Loading emulator.
+[2020-09-07 13:07:25][INFO] EMUL_LOAD  	Checking if provided working directory 'C:\\Users\\Maxwell\\Projetos\\data-science-project\\tools\\prism_0' contains a constructed emulator.
+[2020-09-07 13:07:25][INFO] M-HDF5     	Opening master HDF5-file (mode: 'r').
+[2020-09-07 13:07:25][INFO] EMUL_LOAD  	Provided working directory does not contain a constructed emulator.
+[2020-09-07 13:07:25][INFO] INIT       	Setting ModelLink object.
+[2020-09-07 13:07:25][INFO] INIT       	No constructed emulator is loaded.
+[2020-09-07 13:07:25][INFO] INIT       	ModelLink object set to 'GaussianLink_n1'.
+[2020-09-07 13:07:25][INFO] LOAD_DATA  	Initializing emulator data sets.
+[2020-09-07 13:07:25][INFO] LOAD_DATA  	Non-existent emulator file provided. No additional data needs to be loaded.
+[2020-09-07 13:07:25][INFO] EMUL_LOAD  	Finished loading emulator.
+[2020-09-07 13:07:25][INFO] INIT       	Setting pipeline parameters.
+[2020-09-07 13:07:25][INFO] INIT       	Checking compatibility of provided pipeline parameters.
+[2020-09-07 13:07:25][INFO] INIT       	Finished setting pipeline parameters.
+[2020-09-07 13:07:25][INFO] INIT       	Compiling built-in code snippets.
+[2020-09-07 13:07:25][INFO] INIT       	Finished compiling code snippets.
+[2020-09-07 13:07:25][INFO] LOAD_DATA  	Initializing pipeline data sets.
+[2020-09-07 13:07:25][INFO] LOAD_DATA  	Finished loading pipeline data sets.
+[2020-09-07 13:07:25][INFO] INIT       	Checking requested emulator iteration None.
+[2020-09-07 13:07:25][INFO] INIT       	Requested emulator iteration set to 1.
+[2020-09-07 13:07:25][INFO] CONSTRUCT  	Checking state of emulator iteration 1.
+[2020-09-07 13:07:25][INFO] CONSTRUCT  	Emulator iteration 1 has not been constructed.
+[2020-09-07 13:07:25][INFO] CONSTRUCT  	Starting construction of emulator iteration 1.
+[2020-09-07 13:07:25][INFO] INIT       	Creating a new emulator in working directory 'C:\\Users\\Maxwell\\Projetos\\data-science-project\\tools\\prism_0'.
+[2020-09-07 13:07:25][INFO] CLEAN-UP   	Cleaning up emulator HDF5-files, starting at emulator iteration 1.
+[2020-09-07 13:07:25][INFO] CLEAN-UP   	Finished removing emulator files.
+[2020-09-07 13:07:25][INFO] INIT       	Setting emulator parameters.
+[2020-09-07 13:07:25][INFO] INIT       	Checking compatibility of provided emulator parameters.
+[2020-09-07 13:07:25][INFO] INIT       	Finished setting emulator parameters.
+[2020-09-07 13:07:25][INFO] M-HDF5     	Opening master HDF5-file (mode: 'w').
+[2020-09-07 13:07:25][INFO] M-HDF5     	Closing master HDF5-file.
+[2020-09-07 13:07:25][INFO] EMUL_PREP  	Preparing emulator iteration 1 for construction.
+[2020-09-07 13:07:25][INFO] EMUL_PREP  	Checking if emulator iteration can be prepared.
+[2020-09-07 13:07:25][INFO] INIT       	Assigning model comparison data points to emulator systems for emulator iteration 1.
+[2020-09-07 13:07:25][INFO] M-HDF5     	Opening master HDF5-file (mode: 'r').
+[2020-09-07 13:07:25][INFO] M-HDF5     	Closing master HDF5-file.
+[2020-09-07 13:07:25][INFO] INIT       	Finished assigning data points to emulator systems.
+[2020-09-07 13:07:25][INFO] M-HDF5     	Opening master HDF5-file (mode: 'r+').
+[2020-09-07 13:07:25][INFO] EMUL_PREP  	Preparing emulator system files.
+[2020-09-07 13:07:25][INFO] S-HDF5     	Opening system HDF5-file 2 (mode: 'a').
+[2020-09-07 13:07:25][INFO] S-HDF5     	Closing system HDF5-file 2.
+[2020-09-07 13:07:25][INFO] S-HDF5     	Opening system HDF5-file 1 (mode: 'a').
+[2020-09-07 13:07:25][INFO] S-HDF5     	Closing system HDF5-file 1.
+[2020-09-07 13:07:25][INFO] S-HDF5     	Opening system HDF5-file 0 (mode: 'a').
+[2020-09-07 13:07:25][INFO] S-HDF5     	Closing system HDF5-file 0.
+[2020-09-07 13:07:25][INFO] M-HDF5     	Closing master HDF5-file.
+[2020-09-07 13:07:25][INFO] LOAD_DATA  	Initializing emulator data sets.
+[2020-09-07 13:07:25][INFO] INIT       	Determining emulator system assignments up to emulator iteration 1 for available MPI ranks.
+[2020-09-07 13:07:25][INFO] M-HDF5     	Opening master HDF5-file (mode: 'r').
+[2020-09-07 13:07:25][INFO] INIT       	Determining active emulator systems in every emulator iteration.
+[2020-09-07 13:07:25][INFO] M-HDF5     	Closing master HDF5-file.
+[2020-09-07 13:07:25][INFO] INIT       	Finished determining emulator system assignments.
+[2020-09-07 13:07:25][INFO] LOAD_DATA  	Received emulator systems [2, 1, 0].
+[2020-09-07 13:07:25][INFO] LOAD_DATA  	Loading relevant emulator data up to iteration 1.
+[2020-09-07 13:07:25][INFO] M-HDF5     	Opening master HDF5-file (mode: 'r').
+[2020-09-07 13:07:25][INFO] M-HDF5     	Closing master HDF5-file.
+[2020-09-07 13:07:25][INFO] LOAD_DATA  	Finished loading relevant emulator data.
+[2020-09-07 13:07:25][INFO] EMUL_PREP  	Finished preparing emulator iteration.
+[2020-09-07 13:07:25][INFO] INIT       	Finished creating new emulator.
+[2020-09-07 13:07:25][INFO] LOAD_DATA  	Initializing pipeline data sets.
+[2020-09-07 13:07:25][INFO] LOAD_DATA  	Finished loading pipeline data sets.
+[2020-09-07 13:07:25][INFO] CONSTRUCT  	Creating initial model evaluation sample set of size 500.
+[2020-09-07 13:07:25][INFO] CONSTRUCT  	Finished creating initial sample set.
+[2020-09-07 13:07:25][INFO] MODEL_REAL 	Obtaining model realization data for emulator iteration 1.
+[2020-09-07 13:07:25][INFO] MODEL      	Evaluating model samples.
+[2020-09-07 13:07:25][INFO] CALL_MODEL 	Multi-calling model for sample set of size 500.
+[2020-09-07 13:07:25][INFO] CALL_MODEL 	Finished model multi-call.
+[2020-09-07 13:07:25][INFO] MODEL      	Finished evaluating model samples.
+[2020-09-07 13:07:25][INFO] MODEL_REAL 	Distributing model realization data to corresponding emulator systems.
+[2020-09-07 13:07:25][INFO] M-HDF5     	Opening master HDF5-file (mode: 'r+').
+[2020-09-07 13:07:25][INFO] SAVE_DATA  	Saving 'mod_real_set' data at iteration 1 to HDF5.
+[2020-09-07 13:07:25][INFO] M-HDF5     	Closing master HDF5-file.
+[2020-09-07 13:07:25][INFO] SAVE_DATA  	Finished saving data to HDF5.
+[2020-09-07 13:07:25][INFO] STATISTICS 	Saving statistics to HDF5.
+[2020-09-07 13:07:25][INFO] M-HDF5     	Opening master HDF5-file (mode: 'r+').
+[2020-09-07 13:07:25][INFO] M-HDF5     	Closing master HDF5-file.
+[2020-09-07 13:07:25][INFO] MODEL_REAL 	Finished obtaining and distributing model realization data in 0.00 seconds, averaging 0.00 seconds per model evaluation.
+[2020-09-07 13:07:25][INFO] ACTIVE_PAR 	Determining active parameters.
+[2020-09-07 13:07:27][INFO] ACTIVE_PAR 	Active parameters for emulator system 2: ['A1', 'B1', 'C1']
+[2020-09-07 13:07:27][INFO] S-HDF5     	Opening system HDF5-file 2 (mode: 'r+').
+[2020-09-07 13:07:27][INFO] SAVE_DATA  	Saving 'active_par_data' data at iteration 1 to HDF5.
+[2020-09-07 13:07:27][INFO] S-HDF5     	Closing system HDF5-file 2.
+[2020-09-07 13:07:27][INFO] SAVE_DATA  	Finished saving data to HDF5.
+[2020-09-07 13:07:28][INFO] ACTIVE_PAR 	Active parameters for emulator system 1: ['A1', 'B1', 'C1']
+[2020-09-07 13:07:28][INFO] S-HDF5     	Opening system HDF5-file 1 (mode: 'r+').
+[2020-09-07 13:07:28][INFO] SAVE_DATA  	Saving 'active_par_data' data at iteration 1 to HDF5.
+[2020-09-07 13:07:28][INFO] S-HDF5     	Closing system HDF5-file 1.
+[2020-09-07 13:07:28][INFO] SAVE_DATA  	Finished saving data to HDF5.
+[2020-09-07 13:07:28][INFO] ACTIVE_PAR 	Active parameters for emulator system 0: ['A1', 'B1', 'C1']
+[2020-09-07 13:07:28][INFO] S-HDF5     	Opening system HDF5-file 0 (mode: 'r+').
+[2020-09-07 13:07:28][INFO] SAVE_DATA  	Saving 'active_par_data' data at iteration 1 to HDF5.
+[2020-09-07 13:07:28][INFO] S-HDF5     	Closing system HDF5-file 0.
+[2020-09-07 13:07:28][INFO] SAVE_DATA  	Finished saving data to HDF5.
+[2020-09-07 13:07:28][INFO] ACTIVE_PAR 	Finished determining active parameters.
+[2020-09-07 13:07:28][INFO] REGRESSION 	Performing regression.
+[2020-09-07 13:07:30][INFO] REGRESSION 	Regression score for emulator system 2: 0.917631.
+[2020-09-07 13:07:30][INFO] S-HDF5     	Opening system HDF5-file 2 (mode: 'r+').
+[2020-09-07 13:07:30][INFO] SAVE_DATA  	Saving 'regression' data at iteration 1 to HDF5.
+[2020-09-07 13:07:30][INFO] S-HDF5     	Closing system HDF5-file 2.
+[2020-09-07 13:07:30][INFO] SAVE_DATA  	Finished saving data to HDF5.
+[2020-09-07 13:07:32][INFO] REGRESSION 	Regression score for emulator system 1: 0.875009.
+[2020-09-07 13:07:32][INFO] S-HDF5     	Opening system HDF5-file 1 (mode: 'r+').
+[2020-09-07 13:07:32][INFO] SAVE_DATA  	Saving 'regression' data at iteration 1 to HDF5.
+[2020-09-07 13:07:32][INFO] S-HDF5     	Closing system HDF5-file 1.
+[2020-09-07 13:07:32][INFO] SAVE_DATA  	Finished saving data to HDF5.
+[2020-09-07 13:07:34][INFO] REGRESSION 	Regression score for emulator system 0: 0.905214.
+[2020-09-07 13:07:34][INFO] S-HDF5     	Opening system HDF5-file 0 (mode: 'r+').
+[2020-09-07 13:07:34][INFO] SAVE_DATA  	Saving 'regression' data at iteration 1 to HDF5.
+[2020-09-07 13:07:34][INFO] S-HDF5     	Closing system HDF5-file 0.
+[2020-09-07 13:07:34][INFO] SAVE_DATA  	Finished saving data to HDF5.
+[2020-09-07 13:07:34][INFO] REGRESSION 	Finished performing regression.
+[2020-09-07 13:07:34][INFO] RSDL_VAR   	Determining active and passive residual variance contributions for emulator iteration 1.
+[2020-09-07 13:07:34][INFO] S-HDF5     	Opening system HDF5-file 2 (mode: 'r+').
+[2020-09-07 13:07:34][INFO] SAVE_DATA  	Saving 'rsdl_var' data at iteration 1 to HDF5.
+[2020-09-07 13:07:34][INFO] S-HDF5     	Closing system HDF5-file 2.
+[2020-09-07 13:07:34][INFO] SAVE_DATA  	Finished saving data to HDF5.
+[2020-09-07 13:07:34][INFO] S-HDF5     	Opening system HDF5-file 1 (mode: 'r+').
+[2020-09-07 13:07:34][INFO] SAVE_DATA  	Saving 'rsdl_var' data at iteration 1 to HDF5.
+[2020-09-07 13:07:34][INFO] S-HDF5     	Closing system HDF5-file 1.
+[2020-09-07 13:07:34][INFO] SAVE_DATA  	Finished saving data to HDF5.
+[2020-09-07 13:07:34][INFO] S-HDF5     	Opening system HDF5-file 0 (mode: 'r+').
+[2020-09-07 13:07:34][INFO] SAVE_DATA  	Saving 'rsdl_var' data at iteration 1 to HDF5.
+[2020-09-07 13:07:34][INFO] S-HDF5     	Closing system HDF5-file 0.
+[2020-09-07 13:07:34][INFO] SAVE_DATA  	Finished saving data to HDF5.
+[2020-09-07 13:07:34][INFO] RSDL_VAR   	Finished determining active and passive residual variance contributions.
+[2020-09-07 13:07:34][INFO] COV_MAT    	Calculating covariance matrix for emulator iteration 1.
+[2020-09-07 13:07:34][INFO] COV_MAT    	Calculating inverse of covariance matrix 2.
+[2020-09-07 13:07:34][INFO] S-HDF5     	Opening system HDF5-file 2 (mode: 'r+').
+[2020-09-07 13:07:34][INFO] SAVE_DATA  	Saving 'cov_mat' data at iteration 1 to HDF5.
+[2020-09-07 13:07:34][INFO] S-HDF5     	Closing system HDF5-file 2.
+[2020-09-07 13:07:34][INFO] SAVE_DATA  	Finished saving data to HDF5.
+[2020-09-07 13:07:34][INFO] COV_MAT    	Calculating inverse of covariance matrix 1.
+[2020-09-07 13:07:34][INFO] S-HDF5     	Opening system HDF5-file 1 (mode: 'r+').
+[2020-09-07 13:07:34][INFO] SAVE_DATA  	Saving 'cov_mat' data at iteration 1 to HDF5.
+[2020-09-07 13:07:34][INFO] S-HDF5     	Closing system HDF5-file 1.
+[2020-09-07 13:07:34][INFO] SAVE_DATA  	Finished saving data to HDF5.
+[2020-09-07 13:07:34][INFO] COV_MAT    	Calculating inverse of covariance matrix 0.
+[2020-09-07 13:07:34][INFO] S-HDF5     	Opening system HDF5-file 0 (mode: 'r+').
+[2020-09-07 13:07:34][INFO] SAVE_DATA  	Saving 'cov_mat' data at iteration 1 to HDF5.
+[2020-09-07 13:07:34][INFO] S-HDF5     	Closing system HDF5-file 0.
+[2020-09-07 13:07:34][INFO] SAVE_DATA  	Finished saving data to HDF5.
+[2020-09-07 13:07:34][INFO] COV_MAT    	Finished calculating covariance matrix.
+[2020-09-07 13:07:34][INFO] DOT_TERM   	Pre-calculating second expectation adjustment dot-term for known samples at emulator iteration 1.
+[2020-09-07 13:07:34][INFO] S-HDF5     	Opening system HDF5-file 2 (mode: 'r+').
+[2020-09-07 13:07:34][INFO] SAVE_DATA  	Saving 'exp_dot_term' data at iteration 1 to HDF5.
+[2020-09-07 13:07:34][INFO] S-HDF5     	Closing system HDF5-file 2.
+[2020-09-07 13:07:34][INFO] SAVE_DATA  	Finished saving data to HDF5.
+[2020-09-07 13:07:34][INFO] S-HDF5     	Opening system HDF5-file 1 (mode: 'r+').
+[2020-09-07 13:07:34][INFO] SAVE_DATA  	Saving 'exp_dot_term' data at iteration 1 to HDF5.
+[2020-09-07 13:07:34][INFO] S-HDF5     	Closing system HDF5-file 1.
+[2020-09-07 13:07:34][INFO] SAVE_DATA  	Finished saving data to HDF5.
+[2020-09-07 13:07:34][INFO] S-HDF5     	Opening system HDF5-file 0 (mode: 'r+').
+[2020-09-07 13:07:34][INFO] SAVE_DATA  	Saving 'exp_dot_term' data at iteration 1 to HDF5.
+[2020-09-07 13:07:34][INFO] S-HDF5     	Closing system HDF5-file 0.
+[2020-09-07 13:07:34][INFO] SAVE_DATA  	Finished saving data to HDF5.
+[2020-09-07 13:07:34][INFO] DOT_TERM   	Finished pre-calculating second adjustment dot-term values.
+[2020-09-07 13:07:34][INFO] M-HDF5     	Opening master HDF5-file (mode: 'r+').
+[2020-09-07 13:07:34][INFO] SAVE_DATA  	Saving 'active_par' data at iteration 1 to HDF5.
+[2020-09-07 13:07:34][INFO] M-HDF5     	Closing master HDF5-file.
+[2020-09-07 13:07:34][INFO] SAVE_DATA  	Finished saving data to HDF5.
+[2020-09-07 13:07:34][INFO] STATISTICS 	Saving statistics to HDF5.
+[2020-09-07 13:07:34][INFO] M-HDF5     	Opening master HDF5-file (mode: 'r+').
+[2020-09-07 13:07:34][INFO] M-HDF5     	Closing master HDF5-file.
+[2020-09-07 13:07:34][INFO] M-HDF5     	Opening master HDF5-file (mode: 'r+').
+[2020-09-07 13:07:34][INFO] SAVE_DATA  	Saving 'impl_sam' data at iteration 1 to HDF5.
+[2020-09-07 13:07:34][INFO] SAVE_DATA  	Saving 'n_eval_sam' data at iteration 1 to HDF5.
+[2020-09-07 13:07:34][INFO] M-HDF5     	Closing master HDF5-file.
+[2020-09-07 13:07:34][INFO] INIT       	Setting implausibility cut-off values.
+[2020-09-07 13:07:34][INFO] CHECK      	Checking compatibility of provided implausibility cut-off values.
+[2020-09-07 13:07:34][INFO] INIT       	Finished setting implausibility cut-off values.
+[2020-09-07 13:07:34][INFO] STATISTICS 	Saving statistics to HDF5.
+[2020-09-07 13:07:34][INFO] M-HDF5     	Opening master HDF5-file (mode: 'r+').
+[2020-09-07 13:07:34][INFO] M-HDF5     	Closing master HDF5-file.
+[2020-09-07 13:07:34][INFO] CONSTRUCT  	Finished construction of emulator iteration in 8.59 seconds.
+[2020-09-07 13:07:34][INFO] INIT       	Checking requested emulator iteration None.
+[2020-09-07 13:07:34][INFO] INIT       	Requested emulator iteration set to 1.
+[2020-09-07 13:07:34][INFO] ANALYZE    	Analyzing emulator iteration 1.
+[2020-09-07 13:07:34][INFO] EVAL_SAMS  	Creating emulator evaluation sample set with size 2400.
+[2020-09-07 13:07:34][INFO] EVAL_SAMS  	Finished creating sample set.
+[2020-09-07 13:07:34][INFO] EVAL_SS    	Starting evaluation of sample set of size 2400.
+[2020-09-07 13:07:34][INFO] EVAL_SS    	Analyzing evaluation sample set of size 2400 in emulator iteration 1.
+[2020-09-07 13:07:37][INFO] EVAL_SS    	Finished analyzing evaluation sample set.
+[2020-09-07 13:07:37][INFO] M-HDF5     	Opening master HDF5-file (mode: 'r+').
+[2020-09-07 13:07:37][INFO] SAVE_DATA  	Saving 'impl_par' data at iteration 1 to HDF5.
+[2020-09-07 13:07:37][INFO] SAVE_DATA  	Saving 'impl_sam' data at iteration 1 to HDF5.
+[2020-09-07 13:07:37][INFO] SAVE_DATA  	Saving 'n_eval_sam' data at iteration 1 to HDF5.
+[2020-09-07 13:07:37][INFO] M-HDF5     	Closing master HDF5-file.
+[2020-09-07 13:07:37][INFO] STATISTICS 	Saving statistics to HDF5.
+[2020-09-07 13:07:37][INFO] M-HDF5     	Opening master HDF5-file (mode: 'r+').
+[2020-09-07 13:07:37][INFO] M-HDF5     	Closing master HDF5-file.
+[2020-09-07 13:07:37][INFO] ANALYZE    	Finished analysis of emulator iteration in 3.24 seconds, averaging 745.10 emulator evaluations per second.
+[2020-09-07 13:07:37][INFO] ANALYZE    	There is 30.7% of parameter space remaining.
+[2020-09-07 13:07:37][INFO] DETAILS    	Collecting details about current pipeline instance.
+[2020-09-07 13:07:37][INFO] INIT       	Checking requested emulator iteration None.
+[2020-09-07 13:07:37][INFO] INIT       	Requested emulator iteration set to 1.
+[2020-09-07 13:07:37][INFO] M-HDF5     	Opening master HDF5-file (mode: 'r').
+[2020-09-07 13:07:37][INFO] M-HDF5     	Closing master HDF5-file.
+[2020-09-07 13:07:37][INFO] DETAILS    	Finished collecting details about current pipeline instance.
+[2020-09-07 13:07:37][INFO] PROJECTION 	Starting the projection process.
+[2020-09-07 13:07:37][INFO] PROJ_INIT  	Processing input arguments.
+[2020-09-07 13:07:37][INFO] INIT       	Checking requested emulator iteration None.
+[2020-09-07 13:07:37][INFO] INIT       	Requested emulator iteration set to 1.
+[2020-09-07 13:07:37][INFO] PROJ_INIT  	Finished processing input arguments.
+[2020-09-07 13:07:37][INFO] M-HDF5     	Opening master HDF5-file (mode: 'r+').
+[2020-09-07 13:07:37][INFO] M-HDF5     	Closing master HDF5-file.
+[2020-09-07 13:07:37][INFO] INIT       	Setting projection parameters.
+[2020-09-07 13:07:37][INFO] INIT       	Checking compatibility of provided projection parameters.
+[2020-09-07 13:07:37][INFO] INIT       	Finished setting projection parameters.
+[2020-09-07 13:07:37][INFO] PROJECTION 	Checking if projection data already exists.
+[2020-09-07 13:07:37][INFO] M-HDF5     	Opening master HDF5-file (mode: 'r').
+[2020-09-07 13:07:37][INFO] PROJECTION 	Projection data '1|A1' not found. Will be created.
+[2020-09-07 13:07:37][INFO] PROJECTION 	Projection data '1|B1' not found. Will be created.
+[2020-09-07 13:07:37][INFO] PROJECTION 	Projection data '1|C1' not found. Will be created.
+[2020-09-07 13:07:37][INFO] PROJECTION 	Projection data '1|A1-B1' not found. Will be created.
+[2020-09-07 13:07:37][INFO] PROJECTION 	Projection data '1|A1-C1' not found. Will be created.
+[2020-09-07 13:07:37][INFO] PROJECTION 	Projection data '1|B1-C1' not found. Will be created.
+[2020-09-07 13:07:37][INFO] M-HDF5     	Closing master HDF5-file.
+[2020-09-07 13:07:37][INFO] PROJECTION 	Calculating projection data '1|A1'.
+[2020-09-07 13:07:37][INFO] ANALYSIS   	Analyzing projection hypercube '1|A1'.
+[2020-09-07 13:07:37][INFO] PROJ_HCUBE 	Creating projection hypercube '1|A1'.
+[2020-09-07 13:07:37][INFO] PROJ_HCUBE 	Finished creating projection hypercube '1|A1'.
+[2020-09-07 13:07:37][INFO] EVAL_SS    	Starting evaluation of sample set of size 156250.
+[2020-09-07 13:07:37][INFO] EVAL_SS    	Analyzing evaluation sample set of size 156250 in emulator iteration 1.
+[2020-09-07 13:12:26][ERROR] CHECK      	Input argument "data_err['Come']" is not of type 'float'!
