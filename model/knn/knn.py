@@ -10,7 +10,8 @@ from sklearn.model_selection import cross_val_score
 import numpy as np
 import pandas as pd
 from sklearn import preprocessing
-from sklearn.naive_bayes import GaussianNB
+from sklearn.neighbors import KNeighborsClassifier
+import math
 
 data =  pd.read_csv('../../datasets/dataset-docentes/docentes_dataset.csv', index_col=False, sep=';')
 target = data.pop('Situacao')
@@ -31,13 +32,15 @@ orgaos_df = enc.fit(orgaos_df).transform(orgaos_df)
 data.insert(0, 'Orgao', orgaos_df)
 data.insert(0, 'Cargo', cargos_df)
 
-gnb = GaussianNB()
+n = int(math.sqrt(data.shape[0]))
+
+neigh = KNeighborsClassifier(n_neighbors=n)
 
 t0 = time()
-acc_scor = np.mean(cross_val_score(gnb, data, target, cv=10, scoring='accuracy'))
+acc_scor = np.mean(cross_val_score(neigh, data, target, cv=10, scoring='accuracy'))
 print("accuracy metric training time:", round(time()-t0, 3), "s")
 t1 = time()
-f1_scor = np.mean(cross_val_score(gnb, data, target, cv=10, scoring='f1_weighted'))
+f1_scor = np.mean(cross_val_score(neigh, data, target, cv=10, scoring='f1_weighted'))
 print("f1 metric training time:", round(time()-t1, 3), "s")
 print("total training time:", round(time()-t0, 3), "s")
 
