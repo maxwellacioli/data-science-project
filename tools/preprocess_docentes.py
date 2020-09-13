@@ -68,6 +68,8 @@ abono_docentes_df = abono_docentes_df.drop(columns=remove_col_from_abono)
 abono_docentes_df = abono_docentes_df.reset_index(drop=True)
 aposentados_docentes_df = aposentados_docentes_df.reset_index(drop=True)
 
+abono_date_list = []
+
 # Calculate number of months
 table_date = datetime(2020, 6, 30)
 for index, row in abono_docentes_df.iterrows():
@@ -78,6 +80,7 @@ for index, row in abono_docentes_df.iterrows():
     date = str(row['Ano/Mês inicial do abono de permanência'])
     y, m = int(date[0:4]), int(date[4:6])
     abono_date = datetime(y,m,1)
+    abono_date_list.append(abono_date)
     
     months -= diff_month(abono_date, table_date)
     abono_docentes_df.at[index, 'Quantidade de meses no Serviço público'] = months
@@ -88,6 +91,15 @@ for index, row in abono_docentes_df.iterrows():
 abono_docentes_df = abono_docentes_df.drop(columns=['Quantidade de anos no Serviço público'])
 abono_docentes_df = abono_docentes_df.drop(columns=['Ano/Mês inicial do abono de permanência'])
 
+abono_valor = abono_docentes_df.iloc[:,-1].str.replace(',', '.').astype(float).reset_index(drop=True)
+
+abono_date_df = pd.DataFrame()
+abono_date_df.insert(0, 'value', abono_valor)
+abono_date_df.insert(0, 'date', abono_date_list)
+
+abono_date_df = abono_date_df.groupby('Date')['Value'].sum()
+
+abono_date_df.to_csv(r'abono_date.csv')
 
 index_to_remove_aposentados_df = []
 for index, row in aposentados_docentes_df.iterrows():
@@ -135,18 +147,18 @@ for index, value in abono_docentes_df["Val"].items():
     
 # Rename columns Aposentados
 aposentados_docentes_df = aposentados_docentes_df.rename(columns =
-                                                         {'Cargo emprego': 'Cargo', 
+                                                          {'Cargo emprego': 'Cargo', 
                                                           'Tipo aposentadoria': 'Situacao',
                                                           'Valor aposentadoria': 'Salario'},
-                                                         inplace = False)
+                                                          inplace = False)
 # Rename columns Abono
 abono_docentes_df = abono_docentes_df.rename(columns =
-                                                         {'Descrição do cargo emprego': 'Cargo', 
+                                                          {'Descrição do cargo emprego': 'Cargo', 
                                                           'Denominação do órgão de atuação': 'Orgao',
                                                           'Situação servidor': 'Situacao',
                                                           'Quantidade de meses no Serviço público': 'Meses',
                                                           'Val': 'Salario'},
-                                                         inplace = False)
+                                                          inplace = False)
 columnsTitles = ['Cargo', 'Orgao', 'Meses', 'Salario', 'Situacao']
 
 aposentados_docentes_df = aposentados_docentes_df.reindex(columns=columnsTitles)
