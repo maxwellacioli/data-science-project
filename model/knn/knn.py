@@ -11,7 +11,6 @@ import numpy as np
 import pandas as pd
 from sklearn import preprocessing
 from sklearn.neighbors import KNeighborsClassifier
-import math
 
 data =  pd.read_csv('../../datasets/dataset-docentes/docentes_dataset.csv', index_col=False, sep=';')
 target = data.pop('Situacao')
@@ -32,9 +31,7 @@ orgaos_df = enc.fit(orgaos_df).transform(orgaos_df)
 data.insert(0, 'Orgao', orgaos_df)
 data.insert(0, 'Cargo', cargos_df)
 
-n = int(math.sqrt(data.shape[0]))
-
-neigh = KNeighborsClassifier(n_neighbors=n)
+neigh = KNeighborsClassifier(n_neighbors=10)
 
 t0 = time()
 acc_scor = np.mean(cross_val_score(neigh, data, target, cv=10, scoring='accuracy'))
