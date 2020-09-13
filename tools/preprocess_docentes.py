@@ -175,8 +175,11 @@ dataframe["Situacao"] = dataframe["Situacao"].astype(int)
 df_obj = dataframe.select_dtypes(['object'])
 dataframe[df_obj.columns] = df_obj.apply(lambda x: x.str.strip())
 
-dataframe.to_csv(r'docentes_dataset.csv',index=False, header=True, sep=';')
+#exclusão das instancia cujo salario e' menor que o piso (2886.24)
+dataframe = dataframe[dataframe['Salario'] >= 2886.24]
+#exclusão das instancia cujo meses e' inferior a 12
+dataframe = dataframe[dataframe['Meses'] >= 12]
 
-# TODO calcular o tempo de servico em meses ate o inicio do abono
+dataframe.to_csv(r'docentes_dataset.csv',index=False, header=True, sep=';')
 
 # return dataframe
