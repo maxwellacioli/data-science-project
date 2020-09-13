@@ -5,9 +5,7 @@ Created on Mon Jul 26 20:11:30 2020
 """
 
 
-# import sys
-# sys.path.append("../../tools/")
-# from preprocess_docentes import preprocess
+from time import time
 from sklearn.model_selection import cross_val_score
 import numpy as np
 import pandas as pd
@@ -35,16 +33,15 @@ data.insert(0, 'Cargo', cargos_df)
 
 clf = RandomForestClassifier(criterion='entropy', max_depth= 5, random_state=42)
 
+t0 = time()
 acc_scor = np.mean(cross_val_score(clf, data, target, cv=10, scoring='accuracy'))
-# prec_scor = np.mean(cross_val_score(clf, data, target, cv=10, scoring='precision'))
-# f1_scor = np.mean(cross_val_score(clf, data, target, cv=10, scoring='f1'))
-# rec_scor = np.mean(cross_val_score(clf, data, target, cv=10, scoring='recall'))
+print("accuracy metric training time:", round(time()-t0, 3), "s")
+t1 = time()
+f1_scor = np.mean(cross_val_score(clf, data, target, cv=10, scoring='f1_weighted'))
+print("f1 metric training time:", round(time()-t1, 3), "s")
+print("total training time:", round(time()-t0, 3), "s")
 
 print("Accuracy: {}\n".format(acc_scor) 
-      # + 
-      # "Precision: {}\n".format(prec_scor) 
-      # + 
-      # "Recall: {}\n".format(rec_scor) 
-      # + 
-      # "F1: {}\n".format(f1_scor)
+       + 
+       "F1: {}\n".format(f1_scor)
       )

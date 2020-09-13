@@ -12,7 +12,7 @@ import seaborn as sns
 
 data =  pd.read_csv('../datasets/dataset-docentes/docentes_dataset.csv', index_col=False, sep=';')
 
-''' SITUACAO '''
+print( data[["Meses", "Salario"]].describe() )
 
 # Scatter plots by class
 df_abono = data[data['Situacao'] == 1]
