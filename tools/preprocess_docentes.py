@@ -97,7 +97,7 @@ abono_date_df = pd.DataFrame()
 abono_date_df.insert(0, 'value', abono_valor)
 abono_date_df.insert(0, 'date', abono_date_list)
 
-abono_date_df = abono_date_df.groupby('Date')['Value'].sum()
+abono_date_df = abono_date_df.groupby('date')['value'].sum()
 
 abono_date_df.to_csv(r'abono_date.csv')
 
@@ -189,6 +189,7 @@ dataframe[df_obj.columns] = df_obj.apply(lambda x: x.str.strip())
 
 #exclusão das instancia cujo salario e' menor que o piso (2886.24)
 dataframe = dataframe[dataframe['Salario'] >= 2886.24]
+dataframe = dataframe[dataframe['Salario'] <= 39293]
 #exclusão das instancia cujo meses e' inferior a 12
 dataframe = dataframe[dataframe['Meses'] >= 12]
 
