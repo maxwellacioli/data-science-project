@@ -36,15 +36,9 @@ data.insert(0, 'Cargo', cargos_df)
 clf = RandomForestClassifier(criterion='entropy', max_depth= 5, random_state=42)
 
 acc_scor = np.mean(cross_val_score(clf, data, target, cv=10, scoring='accuracy'))
-# prec_scor = np.mean(cross_val_score(clf, data, target, cv=10, scoring='precision'))
-# f1_scor = np.mean(cross_val_score(clf, data, target, cv=10, scoring='f1'))
-# rec_scor = np.mean(cross_val_score(clf, data, target, cv=10, scoring='recall'))
+f1_scor = np.mean(cross_val_score(clf, data, target, cv=10, scoring='f1_weighted'))
 
 print("Accuracy: {}\n".format(acc_scor) 
-      # + 
-      # "Precision: {}\n".format(prec_scor) 
-      # + 
-      # "Recall: {}\n".format(rec_scor) 
-      # + 
-      # "F1: {}\n".format(f1_scor)
+       + 
+       "F1: {}\n".format(f1_scor)
       )
