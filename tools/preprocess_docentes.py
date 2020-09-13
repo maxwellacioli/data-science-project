@@ -6,9 +6,6 @@ Created on Mon Jul 26 18:42:20 2020
 
 
 import pandas as pd
-import numpy as np
-
-
 from datetime import datetime
 
 def diff_month(d1, d2):
@@ -115,7 +112,6 @@ for index, row in aposentados_docentes_df.iterrows():
         
 aposentados_docentes_df.drop(aposentados_docentes_df.index[index_to_remove_aposentados_df], inplace=True )
         
-        
 # Remane month column
 aposentados_docentes_df = aposentados_docentes_df.rename(columns = {'Dt ingresso servico publico': 'Meses'}, inplace = False)
 # Remove the other data column
@@ -126,7 +122,6 @@ aposentados_docentes_df = aposentados_docentes_df.drop(columns=['Dt ocorrencia i
 
 # '''ABONO columns casting'''
 abono_docentes_df["Val"] = abono_docentes_df.iloc[:,-1].str.replace(',', '.').astype(float).reset_index(drop=True)
-
 
 # '''Aponsentados Valor column casting'''
 aposentados_docentes_df["Meses"] = aposentados_docentes_df["Meses"].astype(object).astype(int)
@@ -177,6 +172,11 @@ dataframe.dropna(inplace=True)
 
 dataframe["Situacao"] = dataframe["Situacao"].astype(int)
 
-print(dataframe.dtypes)
+df_obj = dataframe.select_dtypes(['object'])
+dataframe[df_obj.columns] = df_obj.apply(lambda x: x.str.strip())
 
-# # # //TODO datasets return splited datasets
+dataframe.to_csv(r'docentes_dataset.csv',index=False, header=True, sep=';')
+
+# TODO calcular o tempo de servico em meses ate o inicio do abono
+
+# return dataframe
