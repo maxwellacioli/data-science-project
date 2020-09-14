@@ -75,7 +75,6 @@ for index, row in abono_docentes_df.iterrows():
     val_str = str(row['Val']).replace(',', '.')
     val = float(val_str)
     if(val >= 317.26 and val <= 4322.23):
-        print(index)
         abono_val_list.append(val)
         
         date = str(row['Ano/Mês inicial do abono de permanência'])
