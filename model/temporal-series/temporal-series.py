@@ -14,20 +14,13 @@ plt.rcParams.update({'figure.figsize': (10, 7), 'figure.dpi': 120})
 
 df =  pd.read_csv('../../datasets/dataset-abono-date/abono_date.csv', parse_dates=['date'], index_col='date')
 
-'''R: Como podemos observar no grafico abaixo, existe uma certa sazonalidade entre os dados apresentados.''' 
-
 def plot_df(df, x, y, title="", xlabel='Date', ylabel='Value', dpi=100):
     plt.figure(figsize=(16,5), dpi=dpi)
     plt.plot(x, y, color='tab:red')
     plt.gca().set(title=title, xlabel=xlabel, ylabel=ylabel)
     plt.show()
 
-plot_df(df, x=df.index, y=df.value, title='Vendas de medicamentos na Austrália')    
-
-'''O gráfico a seguir nos mostra que é mês no Janeiro é onde ocorre o pico anual das vendas de remédios. 
-Também podemos observar que anualmente há um queda nas vendas de remédios no início do mês de Fevereiro, 
-estas vendas começam a subir no mês de Março, caindo novamente no mês de Abril e subindo no mês de Maio. Ainda de acordo
-com o gráfico em questão podemos notar que as vezes crescem todos os anos.'''
+plot_df(df, x=df.index, y=df.value, title='Abonos')    
 
 
 df['year'] = [d.year for d in df.index]
@@ -51,7 +44,7 @@ plt.yticks(fontsize=12, alpha=.7)
 plt.title("Sazonalidade da Série Temporal de Gastos com Abono", fontsize=20)
 plt.show()
 
-result_mul = seasonal_decompose(df['value'], model='multiplicative', extrapolate_trend='freq')
+result_mul = seasonal_decompose(df['value'], model='multiplicative', extrapolate_trend='freq', period=12)
 
 # Plot
 # plt.rcParams.update({'figure.figsize': (10,10)})

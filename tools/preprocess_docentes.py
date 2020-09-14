@@ -68,8 +68,6 @@ abono_docentes_df = abono_docentes_df.drop(columns=remove_col_from_abono)
 abono_docentes_df = abono_docentes_df.reset_index(drop=True)
 aposentados_docentes_df = aposentados_docentes_df.reset_index(drop=True)
 
-abono_date_list = []
-
 # Calculate number of months
 table_date = datetime(2020, 6, 30)
 for index, row in abono_docentes_df.iterrows():
@@ -80,26 +78,38 @@ for index, row in abono_docentes_df.iterrows():
     date = str(row['Ano/Mês inicial do abono de permanência'])
     y, m = int(date[0:4]), int(date[4:6])
     abono_date = datetime(y,m,1)
-    abono_date_list.append(abono_date)
     
     months -= diff_month(abono_date, table_date)
     abono_docentes_df.at[index, 'Quantidade de meses no Serviço público'] = months
    
     status = str(row['Situação servidor']).strip()
     abono_docentes_df.at[index, 'Situação servidor'] = status
-# Remove year and date column
-abono_docentes_df = abono_docentes_df.drop(columns=['Quantidade de anos no Serviço público'])
-abono_docentes_df = abono_docentes_df.drop(columns=['Ano/Mês inicial do abono de permanência'])
+    
+abono_date_list = []
+abono_val_list = []
 
-abono_valor = abono_docentes_df.iloc[:,-1].str.replace(',', '.').astype(float).reset_index(drop=True)
-
+for index, row in abono_docentes_df.iterrows():
+    val_str = str(row['Val']).replace(',', '.')
+    val = float(val_str)
+    if(val >= 2886.24 and val <= 39293):
+        abono_val_list.append(val)
+        
+        date = str(row['Ano/Mês inicial do abono de permanência'])
+        y, m = int(date[0:4]), int(date[4:6])
+        abono_date = datetime(y,m,1)
+        abono_date_list.append(abono_date)
+    
 abono_date_df = pd.DataFrame()
-abono_date_df.insert(0, 'value', abono_valor)
+abono_date_df.insert(0, 'value', abono_val_list)
 abono_date_df.insert(0, 'date', abono_date_list)
 
 abono_date_df = abono_date_df.groupby('date')['value'].sum()
 
-abono_date_df.to_csv(r'abono_date.csv')
+abono_date_df.to_csv(r'abono_date.csv')    
+    
+# Remove year and date column
+abono_docentes_df = abono_docentes_df.drop(columns=['Quantidade de anos no Serviço público'])
+abono_docentes_df = abono_docentes_df.drop(columns=['Ano/Mês inicial do abono de permanência'])
 
 index_to_remove_aposentados_df = []
 for index, row in aposentados_docentes_df.iterrows():
